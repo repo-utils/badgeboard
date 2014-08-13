@@ -1,3 +1,3 @@
 
-index.html: src/index.jade src/maintainers.json src/projects.json
+index.html: src/*
 	@node src/build.js

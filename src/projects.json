@@ -1,8 +1,4 @@
 [
-  {
-    "name": "vary"
-  },
-  {
-    "name": "on-headers"
-  }
+  "vary",
+  "on-headers"
 ]
