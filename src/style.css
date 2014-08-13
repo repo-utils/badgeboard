@@ -1,0 +1,9 @@
+.table > tbody > tr > td:first-child, .table > thead > tr > th:first-child {
+  padding-left: 2em;
+}
+.table > tbody > tr > td:last-child, .table > thead > tr > th:last-child {
+  padding-right: 2em;
+}
+.navbar.navbar {
+  border-radius: 0;
+}
