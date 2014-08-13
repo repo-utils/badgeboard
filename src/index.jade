@@ -1,0 +1,74 @@
+
+mixin table(projects)
+  table
+    thead
+      tr
+        th Project Name
+        th Lead Maintainer
+        th
+        th
+        th
+        th
+    tbody
+      for project in projects
+        +row(project)
+
+mixin row(project)
+  tr
+    td: +project(project)
+    td: +maintainer(project.maintainer)
+    td: +badge-npm(project.npm)
+    td: +badge-version(project.node)
+    td: +badge-travis(project.repo)
+    td: +badge-coverage(project.repo)
+    td: +badge-gittip(project.maintainer.github)
+
+mixin project(project)
+  a(href='https://github.com/' + project.repo)= project.name
+
+mixin maintainer(person)
+  a(href='https://github.com/' + person.github)= person.name
+
+mixin badge-npm(name)
+  a(href='https://www.npmjs.org/package/' + name)
+    img(src='http://img.shields.io/npm/v/' + name + '.svg?style=flat')
+
+mixin badge-version(version)
+  //- probably want different colors for different versions
+  a(href='http://nodejs.org/download/')
+    img(src='http://img.shields.io/badge/node.js->=_' + version + '-blue.svg?style=flat')
+
+mixin badge-travis(repo)
+  a(href='https://travis-ci.org/' + repo)
+    img(src='http://img.shields.io/travis/' + repo + '.svg?style=flat')
+
+mixin badge-coverage(repo)
+  a(href='https://coveralls.io/r/' + repo)
+    img(src='https://img.shields.io/coveralls/' + repo + '.svg?style=flat')
+
+mixin badge-gittip(user)
+  a(href='https://www.gittip.com/' + user)
+    img(src='http://img.shields.io/gittip/' + user + '.svg?style=flat')
+
+doctype
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title jshttp
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    h1 jshttp
+
+    +table(projects)
+
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //-
+      script
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
