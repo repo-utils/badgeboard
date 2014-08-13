@@ -1,6 +1,6 @@
 
 mixin table(projects)
-  table
+  table.table.table-striped
     thead
       tr
         th Project Name
@@ -70,8 +70,14 @@ html.no-js
     title jshttp
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel='stylesheet')
+    style
+      include:uglify-css style.css
   body
-    h1 jshttp
+    .navbar.navbar-inverse(role='navigation')
+      .container
+        .navbar-header
+          a.navbar-brand(href='#') JSHTTP
 
     +table(projects)
 
