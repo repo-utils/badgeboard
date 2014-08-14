@@ -7,3 +7,7 @@
 .navbar.navbar {
   border-radius: 0;
 }
+.navbar-brand.logo {
+  padding: 7px;
+  padding-left: 1em;
+}
