@@ -5,7 +5,7 @@ mixin table(projects)
       tr
         th Project Name
         th Lead Maintainer
-        th(rowspan=7)
+        th(colspan=7)
     tbody
       for project in projects
         +row(project)
