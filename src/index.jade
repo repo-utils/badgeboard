@@ -5,12 +5,7 @@ mixin table(projects)
       tr
         th Project Name
         th Lead Maintainer
-        th
-        th
-        th
-        th
-        th
-        th
+        th(rowspan=7)
     tbody
       for project in projects
         +row(project)
@@ -33,34 +28,37 @@ mixin project(project)
 mixin maintainer(person)
   a(href='https://github.com/' + person.github)= person.name
 
+mixin badge(url)
+  img(src='http://img.shields.io/' + url.replace(/^\//, '') + '.svg?style=' + style)
+
 mixin badge-npm(name)
   a(href='https://www.npmjs.org/package/' + name)
-    img(src='http://img.shields.io/npm/v/' + name + '.svg?style=' + style)
+    +badge('/npm/v/' + name)
 
 mixin badge-version(version)
   //- probably want different colors for different versions
   a(href='http://nodejs.org/download/')
-    img(src='http://img.shields.io/badge/node.js->=_' + version + '-blue.svg?style=' + style)
+    +badge('/badge/node.js->=_' + version + '-blue')
 
 mixin badge-david(repo)
   a(href='https://david-dm.org/' + repo)
-    img(src='http://img.shields.io/david/' + repo + '.svg?style=' + style)
+    +badge('/david/' + repo)
 
 mixin badge-travis(repo)
   a(href='https://travis-ci.org/' + repo)
-    img(src='http://img.shields.io/travis/' + repo + '.svg?style=' + style)
+    +badge('/travis/' + repo)
 
 mixin badge-coverage(repo)
   a(href='https://coveralls.io/r/' + repo)
-    img(src='https://img.shields.io/coveralls/' + repo + '.svg?style=' + style)
+    +badge('/coveralls/' + repo)
 
 mixin badge-downloads(npm)
   a(href='https://npmjs.org/package/' + npm)
-    img(src='http://img.shields.io/npm/dm/' + npm + '.svg?style=' + style)
+    +badge('/npm/dm/' + npm)
 
 mixin badge-gittip(user)
   a(href='https://www.gittip.com/' + user)
-    img(src='http://img.shields.io/gittip/' + user + '.svg?style=' + style)
+    +badge('/gittip/' + user)
 
 doctype
 html.no-js
