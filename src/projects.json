@@ -1,4 +1,8 @@
 [
   "vary",
-  "on-headers"
+  "on-headers",
+  {
+    "name": "mime-db",
+    "maintainer": "jonathanong"
+  }
 ]
