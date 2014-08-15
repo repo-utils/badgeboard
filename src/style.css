@@ -6,8 +6,15 @@
 }
 .navbar.navbar {
   border-radius: 0;
+  background-color: #f0f0f0;
+  background-image: -moz-linear-gradient(#fafafa, #f0f0f0);
+  background-image: -webkit-linear-gradient(#fafafa, #f0f0f0);
+  background-image: linear-gradient(#fafafa, #f0f0f0);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #ddd;
 }
 .navbar-brand.logo {
   padding: 7px;
   padding-left: 1em;
 }
+
