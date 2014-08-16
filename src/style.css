@@ -58,3 +58,10 @@ section {
     padding-left: 20px;
   }
 }
+
+@media (min-width: 481px) {
+  .manifesto span:before {
+    content: "\2014";
+    padding-right: 10px;
+  }
+}
