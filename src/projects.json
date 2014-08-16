@@ -1,6 +1,7 @@
 [
   "vary",
   "on-headers",
+  "on-finished",
   {
     "name": "mime-db",
     "maintainer": "jonathanong"
