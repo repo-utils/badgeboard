@@ -17,3 +17,5 @@ mixin maintainer-row(maintainer)
     td
       if maintainer.gittip
         +badge-gittip(maintainer.gittip)
+      else
+        +badge('/badge/tips-N%2FA-lightgrey')
