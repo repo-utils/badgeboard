@@ -2,6 +2,7 @@
   "dougwilson": {
     "name": "Doug Wilson",
     "github": "dougwilson",
+    "npm": "dougwilson",
     "twitter": "blipsofadoug",
     "gittip": "dougwilson",
     "email": "doug@somethingdoug.com"
@@ -9,6 +10,7 @@
   "jonathanong": {
     "name": "Jonathan Ong",
     "github": "jonathanong",
+    "npm": "jongleberry",
     "twitter": "jongleberry",
     "gittip": "jonathanong",
     "email": "me@jongleberry.com"
@@ -16,6 +18,7 @@
   "fishrock123": {
     "name": "Jeremiah Senkpiel",
     "github": "fishrock123",
+    "npm": "fishrock123",
     "twitter": "fishrock123",
     "gittip": "Fishrock123",
     "email": "fishrock123@rocketmail.com"
@@ -23,6 +26,8 @@
   "rlidwka": {
     "name": "Alex Kocharin",
     "github": "rlidwka",
+    "npm": "rlidwka",
+    "twitter": "rlidwka",
     "email": "alex@kocharin.ru"
   }
 }
