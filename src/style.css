@@ -49,3 +49,12 @@ section {
   padding: 25px 5px 15px;
   font-size: 14px;
 }
+
+@media (max-width: 480px) {
+  .manifesto {
+    clear: left;
+    height: auto;
+    padding: 7px 0;
+    padding-left: 20px;
+  }
+}
