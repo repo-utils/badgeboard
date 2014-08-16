@@ -1,9 +1,35 @@
-.table > tbody > tr > td:first-child, .table > thead > tr > th:first-child {
-  padding-left: 2em;
+
+section > h1 {
+  padding-left: 20px;
 }
-.table > tbody > tr > td:last-child, .table > thead > tr > th:last-child {
-  padding-right: 2em;
+
+section {
+  margin-bottom: 20px;
 }
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table td {
+  white-space: nowrap;
+}
+
+.table > tbody > tr > td:first-child,
+.table > thead > tr > th:first-child {
+  padding-left: 20px;
+}
+
+.table > tbody > tr > td:last-child,
+.table > thead > tr > th:last-child {
+  padding-right: 20px;
+  width: 100%;
+}
+
 .navbar.navbar {
   border-radius: 0;
   background-color: #f0f0f0;
@@ -13,10 +39,12 @@
   background-repeat: repeat-x;
   border-bottom: 1px solid #ddd;
 }
+
 .navbar-brand.logo {
   padding: 7px;
-  padding-left: 1em;
+  padding-left: 20px;
 }
+
 .manifesto {
   padding: 25px 5px 15px;
   font-size: 14px;

@@ -1,0 +1,30 @@
+
+include badges
+
+mixin projects(projects)
+  table.table.table-striped
+    thead
+      tr
+        th Project Name
+        th Lead Maintainer
+        th(colspan='6')
+    tbody
+      for project in projects
+        +project-row(project)
+
+mixin project-row(project)
+  tr
+    td: +project(project)
+    td: +maintainer(project.maintainer)
+    td: +badge-npm(project.npm)
+    td: +badge-version(project.node)
+    td: +badge-travis(project.repo)
+    td: +badge-coverage(project.repo)
+    td: +badge-david(project.repo)
+    td: +badge-downloads(project.npm)
+
+mixin project(project)
+  a(href='https://github.com/' + project.repo)= project.name
+
+mixin maintainer(person)
+  a(href='https://github.com/' + person.github)= person.name

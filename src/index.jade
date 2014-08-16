@@ -1,64 +1,6 @@
 
-mixin table(projects)
-  table.table.table-striped
-    thead
-      tr
-        th Project Name
-        th Lead Maintainer
-        th(colspan=7)
-    tbody
-      for project in projects
-        +row(project)
-
-mixin row(project)
-  tr
-    td: +project(project)
-    td: +maintainer(project.maintainer)
-    td: +badge-npm(project.npm)
-    td: +badge-version(project.node)
-    td: +badge-travis(project.repo)
-    td: +badge-coverage(project.repo)
-    td: +badge-david(project.repo)
-    td: +badge-downloads(project.npm)
-    td: +badge-gittip(project.maintainer.github)
-
-mixin project(project)
-  a(href='https://github.com/' + project.repo)= project.name
-
-mixin maintainer(person)
-  a(href='https://github.com/' + person.github)= person.name
-
-mixin badge(url)
-  img(src='http://img.shields.io/' + url.replace(/^\//, '') + '.svg?style=' + style)
-
-mixin badge-npm(name)
-  a(href='https://www.npmjs.org/package/' + name)
-    +badge('/npm/v/' + name)
-
-mixin badge-version(version)
-  //- probably want different colors for different versions
-  a(href='http://nodejs.org/download/')
-    +badge('/badge/node.js->=_' + version + '-blue')
-
-mixin badge-david(repo)
-  a(href='https://david-dm.org/' + repo)
-    +badge('/david/' + repo)
-
-mixin badge-travis(repo)
-  a(href='https://travis-ci.org/' + repo)
-    +badge('/travis/' + repo)
-
-mixin badge-coverage(repo)
-  a(href='https://coveralls.io/r/' + repo)
-    +badge('/coveralls/' + repo)
-
-mixin badge-downloads(npm)
-  a(href='https://npmjs.org/package/' + npm)
-    +badge('/npm/dm/' + npm)
-
-mixin badge-gittip(user)
-  a(href='https://www.gittip.com/' + user)
-    +badge('/gittip/' + user)
+include projects
+include maintainers
 
 doctype
 html.no-js
@@ -78,7 +20,15 @@ html.no-js
           img(src='jshttp.svg', alt='jshttp', title='jshttp', height='40px')
         .navbar-brand.manifesto &mdash; &nbsp; Low-Level JavaScript HTTP-related Modules
 
-    +table(projects)
+    section
+      h1 Projects
+      .table-wrap
+        +projects(projects)
+
+    section
+      h1 Team
+      .table-wrap
+        +maintainers(maintainers)
 
     //- Google Analytics: change UA-XXXXX-X to be your site's ID.
     //-

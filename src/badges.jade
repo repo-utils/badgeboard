@@ -1,0 +1,32 @@
+
+mixin badge(url)
+  img(src='http://img.shields.io/' + url.replace(/^\//, '') + '.svg?style=' + style)
+
+mixin badge-npm(name)
+  a(href='https://www.npmjs.org/package/' + name)
+    +badge('/npm/v/' + name)
+
+mixin badge-version(version)
+  //- probably want different colors for different versions
+  a(href='http://nodejs.org/download/')
+    +badge('/badge/node.js->=_' + version + '-blue')
+
+mixin badge-david(repo)
+  a(href='https://david-dm.org/' + repo)
+    +badge('/david/' + repo)
+
+mixin badge-travis(repo)
+  a(href='https://travis-ci.org/' + repo)
+    +badge('/travis/' + repo)
+
+mixin badge-coverage(repo)
+  a(href='https://coveralls.io/r/' + repo)
+    +badge('/coveralls/' + repo)
+
+mixin badge-downloads(npm)
+  a(href='https://npmjs.org/package/' + npm)
+    +badge('/npm/dm/' + npm)
+
+mixin badge-gittip(user)
+  a(href='https://www.gittip.com/' + user)
+    +badge('/gittip/' + user)

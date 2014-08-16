@@ -31,6 +31,7 @@ var fn = jade.compile(src, {
 
 var html = fn({
   projects: projects,
+  maintainers: maintainers,
   style: 'flat-square'
 })
 

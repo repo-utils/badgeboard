@@ -1,0 +1,19 @@
+
+include badges
+
+mixin maintainers(maintainers)
+  table.table.table-striped
+    tbody
+      for maintainer in maintainers
+        +maintainer-row(maintainer)
+
+mixin maintainer-row(maintainer)
+  tr
+    td
+      a(href='https://github.com/' + maintainer.github)= maintainer.name
+    td
+      if maintainer.twitter
+        a(href='https://twitter.com/' + maintainer.twitter)= '@' + maintainer.twitter
+    td
+      if maintainer.gittip
+        +badge-gittip(maintainer.gittip)

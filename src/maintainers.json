@@ -1,10 +1,28 @@
 {
   "dougwilson": {
     "name": "Doug Wilson",
-    "github": "dougwilson"
+    "github": "dougwilson",
+    "twitter": "blipsofadoug",
+    "gittip": "dougwilson",
+    "email": "doug@somethingdoug.com"
   },
   "jonathanong": {
     "name": "Jonathan Ong",
-    "github": "jonathanong"
+    "github": "jonathanong",
+    "twitter": "jongleberry",
+    "gittip": "jonathanong",
+    "email": "me@jongleberry.com"
+  },
+  "fishrock123": {
+    "name": "Jeremiah Senkpiel",
+    "github": "fishrock123",
+    "twitter": "fishrock123",
+    "gittip": "Fishrock123",
+    "email": "fishrock123@rocketmail.com"
+  },
+  "rlidwka": {
+    "name": "Alex Kocharin",
+    "github": "rlidwka",
+    "email": "alex@kocharin.ru"
   }
 }
