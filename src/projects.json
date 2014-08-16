@@ -4,6 +4,7 @@
   "on-finished",
   {
     "name": "mime-db",
+    "node": "0.6",
     "maintainer": "jonathanong"
   }
 ]
