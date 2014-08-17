@@ -50,6 +50,10 @@ section {
   font-size: 14px;
 }
 
+.navbar-header {
+  width: 100%;
+}
+
 @media (max-width: 480px) {
   .manifesto {
     clear: left;
