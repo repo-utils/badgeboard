@@ -12,6 +12,9 @@
   "license": "MIT",
   "repository": "jshttp/jshttp.github.io",
   "devDependencies": {
-    "jade": "1"
+    "co": "3",
+    "jade": "1",
+    "js-yaml": "3",
+    "request": "2"
   }
 }
