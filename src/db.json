@@ -1,0 +1,22 @@
+{
+  "vary": {
+    "nodeVersion": "0.8",
+    "description": "Manipulate the HTTP Vary header",
+    "npmUser": "dougwilson"
+  },
+  "on-headers": {
+    "nodeVersion": "0.8",
+    "description": "Execute a listener when a response is about to write headers",
+    "npmUser": "dougwilson"
+  },
+  "on-finished": {
+    "nodeVersion": "0.8",
+    "description": "Execute a callback when a request closes, finishes, or errors",
+    "npmUser": "dougwilson"
+  },
+  "mime-db": {
+    "nodeVersion": "0.8",
+    "description": "Media Type Database",
+    "npmUser": "jongleberry"
+  }
+}
