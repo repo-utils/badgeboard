@@ -1,10 +1,6 @@
-[
-  "vary",
-  "on-headers",
-  "on-finished",
-  {
-    "name": "mime-db",
-    "node": "0.6",
-    "maintainer": "jonathanong"
-  }
-]
+{
+  "on-headers": {},
+  "on-finished": {},
+  "vary": {},
+  "mime-db": {"node": "0.6"}
+}

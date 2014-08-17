@@ -1,24 +1,24 @@
 {
   "projects": {
-    "vary": {
-      "nodeVersion": "0.8",
-      "description": "Manipulate the HTTP Vary header",
-      "maintainer": "dougwilson"
+    "mime-db": {
+      "description": "Media Type Database",
+      "maintainer": "jonathanong",
+      "node": "0.8"
+    },
+    "on-finished": {
+      "description": "Execute a callback when a request closes, finishes, or errors",
+      "maintainer": "dougwilson",
+      "node": "0.8"
     },
     "on-headers": {
-      "nodeVersion": "0.8",
+      "node": "0.8",
       "description": "Execute a listener when a response is about to write headers",
       "maintainer": "dougwilson"
     },
-    "on-finished": {
-      "nodeVersion": "0.8",
-      "description": "Execute a callback when a request closes, finishes, or errors",
+    "vary": {
+      "node": "0.8",
+      "description": "Manipulate the HTTP Vary header",
       "maintainer": "dougwilson"
-    },
-    "mime-db": {
-      "nodeVersion": "0.8",
-      "description": "Media Type Database",
-      "maintainer": "jonathanong"
     }
   },
   "maintainers": {
