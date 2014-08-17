@@ -45,6 +45,11 @@ function *getTravis(repo) {
                                  + repo + '/master/.travis.yml'))
 }
 
+function *getUserInfo(user) {
+  return JSON.parse(yield get('https://registry.npmjs.org/'
+                              + '_users/org.couchdb.user:' + user))
+}
+
 function *getOwnedPackages(user) {
   var data = yield get('http://isaacs.iriscouch.com/'
                      + 'registry/_design/app/_view/browseAuthors'
@@ -58,6 +63,7 @@ function *getMaintainersInfo() {
   for (var name in data.maintainers) {
     var mData = data.maintainers[name]
     mData.packages = yield getOwnedPackages(maintainersDB[name].npm)
+    mData.avatar   = (yield getUserInfo(maintainersDB[name].npm)).avatar
   }
 }
 

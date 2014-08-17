@@ -10,6 +10,8 @@ mixin maintainers(maintainers)
 mixin maintainer-row(maintainer)
   tr
     td
+      img(src=maintainer.avatar, width=20, height=20, style='vertical-align:middle')
+    td
       a(href='https://github.com/' + maintainer.github)= maintainer.name
     td
       if maintainer.twitter
