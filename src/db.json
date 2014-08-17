@@ -1,14 +1,14 @@
 {
   "projects": {
     "mime-db": {
+      "node": "0.8",
       "description": "Media Type Database",
-      "maintainer": "jonathanong",
-      "node": "0.8"
+      "maintainer": "jonathanong"
     },
     "on-finished": {
+      "node": "0.8",
       "description": "Execute a callback when a request closes, finishes, or errors",
-      "maintainer": "dougwilson",
-      "node": "0.8"
+      "maintainer": "dougwilson"
     },
     "on-headers": {
       "node": "0.8",

@@ -27,7 +27,8 @@ require('co')(function *() {
   yield [getInfoFromNpm, getInfoFromGithub, getMaintainersInfo]
 
   // it's pretty-printed only for git diffs, don't edit that manually
-  console.log(JSON.stringify(data, null, 2))
+  var json = JSON.stringify(data, null, 2)
+  require('fs').writeFileSync(__dirname + '/db.json', json)
 })()
 
 
@@ -84,7 +85,7 @@ function *getInfoFromGithub() {
 
 function get(url) {
   return function(cb) {
-    console.error(' -> ' + url.split('?')[0])
+    console.log(' -> ' + url.split('?')[0])
     request.get({
       url: url,
       encoding: 'utf8',
