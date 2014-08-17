@@ -1,22 +1,38 @@
 {
-  "vary": {
-    "nodeVersion": "0.8",
-    "description": "Manipulate the HTTP Vary header",
-    "npmUser": "dougwilson"
+  "projects": {
+    "vary": {
+      "nodeVersion": "0.8",
+      "description": "Manipulate the HTTP Vary header",
+      "maintainer": "dougwilson"
+    },
+    "on-headers": {
+      "nodeVersion": "0.8",
+      "description": "Execute a listener when a response is about to write headers",
+      "maintainer": "dougwilson"
+    },
+    "on-finished": {
+      "nodeVersion": "0.8",
+      "description": "Execute a callback when a request closes, finishes, or errors",
+      "maintainer": "dougwilson"
+    },
+    "mime-db": {
+      "nodeVersion": "0.8",
+      "description": "Media Type Database",
+      "maintainer": "jonathanong"
+    }
   },
-  "on-headers": {
-    "nodeVersion": "0.8",
-    "description": "Execute a listener when a response is about to write headers",
-    "npmUser": "dougwilson"
-  },
-  "on-finished": {
-    "nodeVersion": "0.8",
-    "description": "Execute a callback when a request closes, finishes, or errors",
-    "npmUser": "dougwilson"
-  },
-  "mime-db": {
-    "nodeVersion": "0.8",
-    "description": "Media Type Database",
-    "npmUser": "jongleberry"
+  "maintainers": {
+    "dougwilson": {
+      "packages": 70
+    },
+    "jonathanong": {
+      "packages": 423
+    },
+    "fishrock123": {
+      "packages": 49
+    },
+    "rlidwka": {
+      "packages": 13
+    }
   }
 }
