@@ -24,7 +24,7 @@ for (var name in projects) {
   var project = projects[name]
   project.name = project.name || name
   project.npm = project.npm || name.toLowerCase()
-  project.repo = project.repo || ('jshttp/' + project.npm)
+  project.repo = project.repo || ('jshttp/' + project.name)
   project.maintainer = maintainers[project.maintainer]
 }
 
