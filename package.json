@@ -13,8 +13,13 @@
   "repository": "jshttp/jshttp.github.io",
   "devDependencies": {
     "co": "3",
+    "gnode": "0.0.8",
     "jade": "1",
     "js-yaml": "3",
     "request": "2"
+  },
+  "scripts": {
+    "build": "node src/build.js",
+    "build-db": "gnode src/make-db.js"
   }
 }
