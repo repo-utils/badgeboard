@@ -19,7 +19,10 @@ var fn = jade.compile(src, {
 var html = fn({
   projects: projects,
   maintainers: maintainers,
-  style: 'flat-square'
+  style: 'flat-square',
+  title: 'badgeboard'
+  description: 'project status at a glance'
+  keywords: 'badgeboard, repo-utils'
 })
 
 fs.writeFileSync(out, html)
