@@ -3,7 +3,10 @@ html.no-js
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title= name || 'badgeboard'
+    if (typeof(title) !== 'undefined')
+      title= title
+    else
+      title= name || 'badgeboard'
     meta(name='description', content=description || '')
     meta(name='keywords', content=keywords || '')
     meta(name='viewport', content='width=device-width, initial-scale=1')
