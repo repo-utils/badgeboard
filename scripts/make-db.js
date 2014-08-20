@@ -40,8 +40,13 @@ function *getNpmInfo(pkg) {
 }
 
 function *getTravis(repo) {
-  return YAML.safeLoad(yield get('https://raw.githubusercontent.com/'
-                                 + repo + '/master/.travis.yml'))
+  var result = yield get('https://raw.githubusercontent.com/'
+                         + repo + '/master/.travis.yml')
+  try {
+    return YAML.safeLoad(result)
+  } catch(_) {
+    return {}
+  }
 }
 
 function *getUserInfo(user) {
@@ -89,7 +94,9 @@ function *getInfoFromGithub() {
     var project = projectsDB[i]
     var travis = yield getTravis(project.repo)
     var projectData = data.projects[project.name]
-    projectData.node = travis.node_js.sort(versionSort)[0]
+    if (travis.node_js) {
+      projectData.node = travis.node_js.sort(versionSort)[0]
+    }
   }
 }
 
