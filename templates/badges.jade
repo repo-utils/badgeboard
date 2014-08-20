@@ -9,7 +9,10 @@ mixin badge-npm(name)
 mixin badge-version(version)
   //- probably want different colors for different versions
   a(href='http://nodejs.org/download/')
-    +badge('/badge/node.js->=_' + version + '-' + (version === '0.11' ? 'orange' : version === '0.10' ? 'green' : 'brightgreen'))
+    if (version)
+      +badge('/badge/node.js->=_' + version + '-' + (version === '0.11' ? 'orange' : version === '0.10' ? 'green' : 'brightgreen'))
+    else
+      +badge('/badge/node.js-N%2FA-lightgrey')
 
 mixin badge-david(repo)
   a(href='https://david-dm.org/' + repo)

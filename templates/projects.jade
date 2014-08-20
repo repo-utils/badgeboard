@@ -27,4 +27,5 @@ mixin project(project)
   a(title=project.description, href='https://github.com/' + project.repo)= project.name
 
 mixin maintainer(person)
-  a(href='https://github.com/' + person.github)= person.name
+  if typeof(person) === 'object' && person != null
+    a(href='https://github.com/' + person.github)= person.name
