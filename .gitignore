@@ -11,4 +11,4 @@ coverage
 #
 # remove this when you're creating a real badgeboard
 /index.html
-/src/db.json
+/scripts/db.json

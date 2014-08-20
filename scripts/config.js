@@ -3,7 +3,8 @@
 
 var yaml = require('js-yaml')
 var fs = require('fs')
-var config = fs.readFileSync(__dirname + '/config.yaml', 'utf8')
+var path = require('path')
+var config = fs.readFileSync(path.join(__dirname, '../config.yaml'), 'utf8')
 module.exports = config = yaml.safeLoad(config)
 
 try {

@@ -3,7 +3,7 @@ var fs = require('fs')
 var path = require('path')
 var jade = require('jade')
 
-var index = path.join(__dirname, 'index.jade')
+var index = path.join(__dirname, '../templates/index.jade')
 var out = path.join(__dirname, '../index.html')
 var config = require('./config')
 
