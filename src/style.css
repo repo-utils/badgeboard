@@ -54,6 +54,15 @@ section {
   width: 100%;
 }
 
+/* make columns wide enough for "Lead Maintainer" to
+   fit on one line
+
+   yes, this is a hack, so figure out something better
+*/
+.projects-table > thead > tr > th {
+  min-width: 9em;
+}
+
 @media (max-width: 480px) {
   .manifesto {
     clear: left;
