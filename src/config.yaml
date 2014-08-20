@@ -1,0 +1,60 @@
+# organization name, it's used to get github repo url, also in page title
+name: jshttp
+
+# badge style, can be "flat", "flat-square" or ""
+# see http://shields.io/ for details
+badge-style: flat-square
+
+# meta headers in html
+title:       badgeboard
+description: project status at a glance
+keywords:    badgeboard, repo-utils
+
+# this determines what info will be fetched with `make db`;
+# you can comment out stuff to reduce number of http requests
+db.json:
+  projects:
+   - node        # node version, it's the lowest version from .travis.yml
+   - description # package description from package.json (from npm registry)
+   - maintainer  # maintainer npm account (= _npmUser of last published ver)
+  maintainers:
+   - projects    # amount of projects this npm user has
+   - avatar      # gravatar displayed on npm website
+
+# list of projects, this will be sorted by name;
+# every package is either string or object
+projects:
+ - on-headers
+ - on-finished
+ - vary
+ - mime-db:
+     node: 0.6   # you can override stuff from db.json here, i.e. node version
+
+# list of maintainers, this won't be sorted
+maintainers:
+ - name:    Doug Wilson
+   github:  dougwilson   # github account, required: we link to it
+   npm:     dougwilson   # npm account, required to determine lead maintainer
+   twitter: blipsofadoug # twitter account, optional
+   gittip:  dougwilson   # gittub badge, optional
+   email:   doug@somethingdoug.com
+
+ - name:    Jonathan Ong
+   github:  jonathanong
+   npm:     jongleberry
+   twitter: jongleberry
+   gittip:  jonathanong
+   email:   me@jongleberry.com
+
+ - name:    Jeremiah Senkpiel
+   github:  fishrock123
+   npm:     fishrock123
+   twitter: fishrock123
+   gittip:  Fishrock123
+   email:   fishrock123@rocketmail.com
+
+ - name:    Alex Kocharin
+   github:  rlidwka
+   npm:     rlidwka
+   twitter: rlidwka
+   email:   alex@kocharin.ru
