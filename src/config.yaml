@@ -10,17 +10,6 @@ title:       badgeboard
 description: project status at a glance
 keywords:    badgeboard, repo-utils
 
-# this determines what info will be fetched with `make db`;
-# you can comment out stuff to reduce number of http requests
-db.json:
-  projects:
-   - node        # node version, it's the lowest version from .travis.yml
-   - description # package description from package.json (from npm registry)
-   - maintainer  # maintainer npm account (= _npmUser of last published ver)
-  maintainers:
-   - projects    # amount of projects this npm user has
-   - avatar      # gravatar displayed on npm website
-
 # list of projects, this will be sorted by name;
 # every package is either string or object
 projects:
@@ -58,3 +47,14 @@ maintainers:
    npm:     rlidwka
    twitter: rlidwka
    email:   alex@kocharin.ru
+
+# this determines what info will be fetched with `make db`;
+# you can comment out stuff to reduce number of http requests
+db.json:
+  projects:
+   - node        # node version, it's the lowest version from .travis.yml
+   - description # package description from package.json (from npm registry)
+   - maintainer  # maintainer npm account (= _npmUser of last published ver)
+  maintainers:
+   - packages    # amount of packages this npm user has
+   - avatar      # gravatar displayed on npm website

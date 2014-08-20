@@ -51,6 +51,22 @@ config.projects = config.projects.map(function(project) {
 })
 
 //
+// list of strings -> object
+// i.e. ['foo', 'bar', 'baz'] -> {foo: true, bar: true, baz: true}
+//
+if (config['db.json']) {
+  for (var k in config['db.json']) {
+    if (Array.isArray(config['db.json'][k])) {
+      var t = {}
+      config['db.json'][k].forEach(function(v) {
+        t[v] = true
+      })
+      config['db.json'][k] = t
+    }
+  }
+}
+
+//
 // helpers
 //
 function mixin(obj, stuff) {

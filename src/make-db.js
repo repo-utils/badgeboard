@@ -12,11 +12,12 @@ var data = {
   projects: {},
   maintainers: {},
 }
-var maintainersDB = require('./config').maintainers
+var config = require('./config')
+var maintainersDB = config.maintainers
 maintainersDB.forEach(function (maintainer) {
   data.maintainers[maintainer.npm] = {}
 })
-var projectsDB = require('./config').projects
+var projectsDB = config.projects
 projectsDB.forEach(function (project) {
   data.projects[project.name] = {}
 })
@@ -60,12 +61,18 @@ function *getOwnedPackages(user) {
 function *getMaintainersInfo() {
   for (var name in data.maintainers) {
     var mData = data.maintainers[name]
-    mData.packages = yield getOwnedPackages(name)
-    mData.avatar   = (yield getUserInfo(name)).avatar
+    if (config['db.json'].maintainers.packages)
+      mData.packages = yield getOwnedPackages(name)
+
+    if (config['db.json'].maintainers.avatar)
+      mData.avatar = (yield getUserInfo(name)).avatar
   }
 }
 
 function *getInfoFromNpm() {
+  if (!config['db.json'].projects.maintainer
+   && !config['db.json'].projects.description) return
+
   for (var i=0; i<projectsDB.length; i++) {
     var project = projectsDB[i]
     var npm = yield getNpmInfo(project.npm)
@@ -77,6 +84,7 @@ function *getInfoFromNpm() {
 }
 
 function *getInfoFromGithub() {
+  if (!config['db.json'].projects.node) return
   for (var i=0; i<projectsDB.length; i++) {
     var project = projectsDB[i]
     var travis = yield getTravis(project.repo)
