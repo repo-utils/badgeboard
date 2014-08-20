@@ -49,6 +49,8 @@ config.projects = (config.projects || []).map(function(project) {
     return m.npm === project.maintainer
   })[0]
   return project
+}).sort(function(a, b) {
+  return a.name > b.name ? 1 : -1
 })
 
 //
