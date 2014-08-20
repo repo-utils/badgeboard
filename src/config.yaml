@@ -3,7 +3,7 @@ name: jshttp
 
 # badge style, can be "flat", "flat-square" or ""
 # see http://shields.io/ for details
-badge-style: flat-square
+badge_style: flat-square
 
 # meta headers in html
 title:       badgeboard

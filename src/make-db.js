@@ -12,15 +12,13 @@ var data = {
   projects: {},
   maintainers: {},
 }
-var maintainersDB = require('./db').maintainers
-var npmUserToName = {}
-Object.keys(maintainersDB).forEach(function (maintainer) {
-  data.maintainers[maintainer] = {}
-  npmUserToName[maintainersDB[maintainer].npm] = maintainer
+var maintainersDB = require('./config').maintainers
+maintainersDB.forEach(function (maintainer) {
+  data.maintainers[maintainer.npm] = {}
 })
-var projectsDB = require('./db').projects
-Object.keys(projectsDB).forEach(function (project) {
-  data.projects[project] = {}
+var projectsDB = require('./config').projects
+projectsDB.forEach(function (project) {
+  data.projects[project.name] = {}
 })
 
 require('co')(function *() {
@@ -62,25 +60,27 @@ function *getOwnedPackages(user) {
 function *getMaintainersInfo() {
   for (var name in data.maintainers) {
     var mData = data.maintainers[name]
-    mData.packages = yield getOwnedPackages(maintainersDB[name].npm)
-    mData.avatar   = (yield getUserInfo(maintainersDB[name].npm)).avatar
+    mData.packages = yield getOwnedPackages(name)
+    mData.avatar   = (yield getUserInfo(name)).avatar
   }
 }
 
 function *getInfoFromNpm() {
-  for (var name in projectsDB) {
-    var npm = yield getNpmInfo(projectsDB[name].npm)
-    var projectData = data.projects[name]
+  for (var i=0; i<projectsDB.length; i++) {
+    var project = projectsDB[i]
+    var npm = yield getNpmInfo(project.npm)
+    var projectData = data.projects[project.name]
     projectData.description = npm.description
     projectData.maintainer =
-      npmUserToName[npm.versions[npm['dist-tags'].latest]._npmUser.name]
+      npm.versions[npm['dist-tags'].latest]._npmUser.name
   }
 }
 
 function *getInfoFromGithub() {
-  for (var name in projectsDB) {
-    var travis = yield getTravis(projectsDB[name].repo)
-    var projectData = data.projects[name]
+  for (var i=0; i<projectsDB.length; i++) {
+    var project = projectsDB[i]
+    var travis = yield getTravis(project.repo)
+    var projectData = data.projects[project.name]
     projectData.node = travis.node_js.sort(versionSort)[0]
   }
 }
