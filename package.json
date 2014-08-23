@@ -1,5 +1,5 @@
 {
-  "name": "jshttp.github.io",
+  "name": "badgeboard",
   "description": "",
   "private": true,
   "version": "1.0.0",
@@ -10,7 +10,7 @@
     "twitter": "https://twitter.com/jongleberry"
   },
   "license": "MIT",
-  "repository": "jshttp/jshttp.github.io",
+  "repository": "repo-utils/badgeboard",
   "devDependencies": {
     "co": "3",
     "gnode": "0.0.8",
