@@ -1,6 +1,9 @@
 
 include badges
 
+mixin avatar(emailmd5, size)
+  img(src='https://secure.gravatar.com/avatar/' + emailmd5 + '?s=' + size + '&d=retro', width=size, height=size, style='vertical-align:middle')
+
 mixin maintainers(maintainers)
   table.table.table-striped
     tbody
@@ -10,7 +13,7 @@ mixin maintainers(maintainers)
 mixin maintainer-row(maintainer)
   tr
     td
-      img(src=maintainer.avatar, width=20, height=20, style='vertical-align:middle')
+      +avatar(maintainer.avatar, 20)
     td
       a(href='https://github.com/' + maintainer.github)= maintainer.name
     td

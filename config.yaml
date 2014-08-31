@@ -35,6 +35,10 @@ maintainers:
    gittip:  jonathanong
    email:   me@jongleberry.com
 
+   # if gravatar is attached to an email different from specified above,
+   # add md5 of it here:
+   avatar:  6e33cc0412b61cc01daac23c8989003c
+
  - name:    Jeremiah Senkpiel
    github:  fishrock123
    npm:     fishrock123
@@ -57,4 +61,3 @@ db.json:
    - maintainer  # maintainer npm account (= _npmUser of last published ver)
   maintainers:
    - packages    # amount of packages this npm user has
-   - avatar      # gravatar displayed on npm website

@@ -69,8 +69,8 @@ function *getMaintainersInfo() {
     if (config['db.json'].maintainers.packages)
       mData.packages = yield getOwnedPackages(name)
 
-    if (config['db.json'].maintainers.avatar)
-      mData.avatar = (yield getUserInfo(name)).avatar
+    //if (config['db.json'].maintainers.avatar)
+    //  mData.avatar = (yield getUserInfo(name)).avatar
   }
 }
 

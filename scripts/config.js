@@ -4,6 +4,7 @@
 var yaml = require('js-yaml')
 var fs = require('fs')
 var path = require('path')
+var crypto = require('crypto')
 var config = fs.readFileSync(path.join(__dirname, '../config.yaml'), 'utf8')
 module.exports = config = yaml.safeLoad(config)
 
@@ -22,6 +23,8 @@ config.maintainers = (config.maintainers || []).map(function(maintainer) {
   if (db.maintainers[maintainer.npm])
     mixin(maintainer, db.maintainers[maintainer.npm])
 
+  maintainer.avatar = maintainer.avatar
+    || crypto.createHash('md5').update(maintainer.email).digest('hex')
   return maintainer
 })
 

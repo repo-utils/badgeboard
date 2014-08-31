@@ -1,7 +1,7 @@
 NODE ?= node
 NPM  ?= npm
 
-index.html: node_modules scripts/* templates/* scripts/db.json
+index.html: config.yaml node_modules scripts/* templates/* scripts/db.json
 	@${NODE} scripts/build.js
 
 # command to rebuild db.json, will be executed
