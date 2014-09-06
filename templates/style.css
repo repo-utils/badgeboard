@@ -7,6 +7,13 @@ section {
   margin-bottom: 20px;
 }
 
+footer {
+  border-top: 1px solid #ddd;
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
