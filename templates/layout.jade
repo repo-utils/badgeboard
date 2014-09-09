@@ -6,7 +6,7 @@ html.no-js
     if (typeof(title) !== 'undefined')
       title= title
     else
-      title= name || 'badgeboard'
+      title= name
     meta(name='description', content=description || '')
     meta(name='keywords', content=keywords || '')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -16,10 +16,9 @@ html.no-js
   body
     .navbar(role='navigation')
       .navbar-header
-        a.navbar-brand.logo(href='https://github.com/jshttp/jshttp.github.io')
-          img(src='jshttp.svg', alt='jshttp', title='jshttp', height='40px')
+        a.navbar-brand.logo(href='https://github.com/' + name)= title
         .navbar-brand.manifesto
-          span Low-Level JavaScript HTTP-related Modules
+          span= description
 
     block body
 

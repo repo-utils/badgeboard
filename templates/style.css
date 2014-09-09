@@ -46,18 +46,30 @@ footer {
   border-bottom: 1px solid #ddd;
 }
 
-.navbar-brand.logo {
-  padding: 7px;
-  padding-left: 20px;
-}
-
 .manifesto {
-  padding: 25px 5px 15px;
+  padding: 25px 0px 15px;
   font-size: 14px;
 }
 
 .navbar-header {
   width: 100%;
+}
+
+.navbar {
+  min-height: 40px;
+}
+
+.navbar-brand {
+  height: 40px;
+  padding: 10px;
+}
+
+a.navbar-brand {
+  color: #333;
+}
+
+a.navbar-brand:hover, a.navbar-brand:focus {
+  color: #2a6496;
 }
 
 @media (max-width: 480px) {
@@ -73,5 +85,9 @@ footer {
   .manifesto span:before {
     content: "\2014";
     padding-right: 10px;
+  }
+
+  .manifesto {
+    padding-left: 0;
   }
 }

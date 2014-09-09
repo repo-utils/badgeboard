@@ -6,7 +6,7 @@ name: jshttp
 badge_style: flat-square
 
 # meta headers in html
-title:       badgeboard
+title:       BadgeBoard
 description: project status at a glance
 keywords:    badgeboard, repo-utils
 
