@@ -36,6 +36,17 @@ footer {
   width: 100%;
 }
 
+table.sortable > thead > tr > th {
+  cursor: pointer;
+}
+table.sortable > thead > tr > th:hover {
+  color: #2a6496;
+}
+
+table.sortable > thead > tr > th.empty {
+  cursor: default;
+}
+
 .navbar.navbar {
   border-radius: 0;
   background-color: #f0f0f0;

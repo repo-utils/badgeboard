@@ -2,12 +2,15 @@
 include badges
 
 mixin projects(projects)
-  table.table.table-striped.projects-table
+  table.table.sortable.table-striped.projects-table
     thead
       tr
-        th Project
+        th.sorttable_sorted
+          | Project
+          //- marker means "sorted by default"; should be in .js, but I'm lazy
+          span#sorttable_sortfwdind &nbsp;&#x25BE;
         th Maintainer
-        th(colspan='6')
+        th.empty(colspan='6')
     tbody
       for project in projects
         +project-row(project)
