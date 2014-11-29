@@ -1,23 +1,33 @@
 # organization name, it's used to get github repo url, also in page title
-name: jshttp
+name: expressjs
 
 # badge style, can be "flat", "flat-square" or ""
 # see http://shields.io/ for details
 badge_style: flat-square
 
 # meta headers in html
-title:       BadgeBoard
-description: project status at a glance
-keywords:    badgeboard, repo-utils
+title:       ExpressJS
+description: Node/Express utilities and middleware
+keywords:    express
 
 # list of projects, this will be sorted by name;
 # every package is either string or object
 projects:
- - on-headers
- - on-finished
- - vary
- - mime-db:
-     node: 0.6   # you can override stuff from db.json here, i.e. node version
+ - cookie-session
+ - session
+ - compression
+ - serve-index
+ - errorhandler
+ - body-parser
+ - serve-favicon
+ - csurf
+ - morgan
+ - serve-static
+ - method-override
+ - response-time
+ - parseurl
+ - flash
+ - vhost
 
 # list of maintainers, this won't be sorted
 maintainers:
