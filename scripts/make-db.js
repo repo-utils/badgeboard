@@ -38,7 +38,7 @@ require('co')(function *() {
     return ret
   }, 2)
   require('fs').writeFileSync(__dirname + '/db.json', json)
-})()
+}).then()
 
 
 //
