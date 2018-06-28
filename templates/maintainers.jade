@@ -22,8 +22,3 @@ mixin maintainer-row(maintainer)
     td
       a(href='https://www.npmjs.org/~' + maintainer.npm)
         +badge('/badge/packages-' + Number(maintainer.packages) + '-blue')
-    td
-      if maintainer.gittip
-        +badge-gittip(maintainer.gittip)
-      else
-        +badge('/badge/tips-N%2FA-lightgrey')

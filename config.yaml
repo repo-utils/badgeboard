@@ -25,14 +25,12 @@ maintainers:
    github:  dougwilson   # github account, required: we link to it
    npm:     dougwilson   # npm account, required to determine lead maintainer
    twitter: blipsofadoug # twitter account, optional
-   gittip:  dougwilson   # gittub badge, optional
    email:   doug@somethingdoug.com
 
  - name:    Jonathan Ong
    github:  jonathanong
    npm:     jongleberry
    twitter: jongleberry
-   gittip:  jonathanong
    email:   me@jongleberry.com
 
    # if gravatar is attached to an email different from specified above,
@@ -43,7 +41,6 @@ maintainers:
    github:  fishrock123
    npm:     fishrock123
    twitter: fishrock123
-   gittip:  Fishrock123
    email:   fishrock123@rocketmail.com
 
  - name:    Alex Kocharin
