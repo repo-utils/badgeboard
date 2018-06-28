@@ -12,6 +12,7 @@ var src = fs.readFileSync(index, 'utf8')
 var fn = jade.compile(src, {
   compileDebug: false,
   filename: index,
+  pretty: true
 })
 
 var html = fn(config)
