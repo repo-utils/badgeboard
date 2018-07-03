@@ -19,6 +19,10 @@ mixin badge-david(repo)
   a(href='https://david-dm.org/' + repo)
     +badge('/david/' + repo)
 
+mixin badge-dependabot(npm)
+  a(href='https://dependabot.com/compatibility-score.html?package-manager=npm_and_yarn&version-scheme=semver&dependency-name=' + npm)
+    +badge('/dependabot/semver/npm_and_yarn/' + npm)
+
 mixin badge-travis(repo)
   a(href='https://travis-ci.org/' + repo)
     +badge('/travis/' + repo)
