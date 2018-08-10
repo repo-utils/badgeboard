@@ -11,7 +11,7 @@ mixin badge-version(version)
   a(href='http://nodejs.org/download/')
     if ((version_cmp = Number(version.toString().split('.').slice(0, 2).map(function (n) { return (n < 10 ? '0' : '') + n }).join('.'))))
       +badge('/badge/node.js->=_' + version + '-' +
-        (version_cmp >= 5.0 ? 'orange' : version_cmp >= 4.0 ? 'green' : 'brightgreen'))
+        (version_cmp >= 10.0 ? 'orange' : version_cmp >= 8.0 ? 'yellow' : 'brightgreen'))
     else
       +badge('/badge/node.js-N%2FA-lightgrey')
 
