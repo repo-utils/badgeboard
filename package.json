@@ -13,7 +13,7 @@
   "repository": "repo-utils/badgeboard",
   "devDependencies": {
     "co": "4",
-    "gnode": "0.1.0",
+    "gnode": "0.1.2",
     "jade": "1",
     "js-yaml": "3",
     "request": "2"
