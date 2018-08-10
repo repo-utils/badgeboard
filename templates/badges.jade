@@ -21,11 +21,11 @@ mixin badge-david(repo)
 
 mixin badge-travis(repo)
   a(href='https://travis-ci.org/' + repo)
-    +badge('/travis/' + repo)
+    +badge('/travis/' + repo + '/master')
 
 mixin badge-coverage(repo)
   a(href='https://coveralls.io/r/' + repo)
-    +badge('/coveralls/c/github/' + repo)
+    +badge('/coveralls/c/github/' + repo + '/master')
 
 mixin badge-downloads(npm)
   a(href='https://npmjs.org/package/' + npm)
