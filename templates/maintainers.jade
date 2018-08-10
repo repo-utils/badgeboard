@@ -21,4 +21,4 @@ mixin maintainer-row(maintainer)
         a(href='https://twitter.com/' + maintainer.twitter)= '@' + maintainer.twitter
     td
       a(href='https://www.npmjs.org/~' + maintainer.npm)
-        +badge('/badge/packages-' + Number(maintainer.packages) + '-blue')
+        +badge('/badge/packages/' + Number(maintainer.packages) + '/blue')

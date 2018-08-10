@@ -1,6 +1,6 @@
 
 mixin badge(url)
-  img(src='https://img.shields.io/' + url.replace(/^\//, '') + '.svg?style=' + badge_style)
+  img(src='https://' + (badge_style ? badge_style + '.' : '') + 'badgen.net/' + url.replace(/^\//, ''))
 
 mixin badge-npm(name)
   a(href='https://www.npmjs.org/package/' + name)
@@ -10,14 +10,14 @@ mixin badge-version(version)
   //- probably want different colors for different versions
   a(href='http://nodejs.org/download/')
     if ((version_cmp = Number(version.toString().split('.').slice(0, 2).map(function (n) { return (n < 10 ? '0' : '') + n }).join('.'))))
-      +badge('/badge/node.js->=_' + version + '-' +
-        (version_cmp >= 10.0 ? 'orange' : version_cmp >= 8.0 ? 'yellow' : 'brightgreen'))
+      +badge('/badge/node.js/>=%20' + version + '/' +
+        (version_cmp >= 10.0 ? 'orange' : version_cmp >= 8.0 ? 'yellow' : 'green'))
     else
-      +badge('/badge/node.js-N%2FA-lightgrey')
+      +badge('/badge/node.js/N%2FA/grey')
 
 mixin badge-david(repo)
   a(href='https://david-dm.org/' + repo)
-    +badge('/david/' + repo)
+    +badge('/david/dep/' + repo)
 
 mixin badge-travis(repo)
   a(href='https://travis-ci.org/' + repo)
@@ -25,7 +25,7 @@ mixin badge-travis(repo)
 
 mixin badge-coverage(repo)
   a(href='https://coveralls.io/r/' + repo)
-    +badge('/coveralls/' + repo)
+    +badge('/coveralls/c/github/' + repo)
 
 mixin badge-downloads(npm)
   a(href='https://npmjs.org/package/' + npm)

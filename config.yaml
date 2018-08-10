@@ -1,9 +1,9 @@
 # organization name, it's used to get github repo url, also in page title
 name: jshttp
 
-# badge style, can be "flat", "flat-square" or ""
-# see http://shields.io/ for details
-badge_style: flat-square
+# badge style, can be "flat" or ""
+# see https://badgen.net/ for details
+badge_style: flat
 
 # meta headers in html
 title:       BadgeBoard
