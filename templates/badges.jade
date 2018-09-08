@@ -27,6 +27,10 @@ mixin badge-coverage(repo)
   a(href='https://coveralls.io/r/' + repo)
     +badge('/coveralls/c/github/' + repo + '/master')
 
+mixin badge-packagephobia(npm)
+  a(href='https://packagephobia.now.sh/result?p=' + npm)
+    +badge('/packagephobia/install/' + npm)
+
 mixin badge-downloads(npm)
   a(href='https://npmjs.org/package/' + npm)
     +badge('/npm/dm/' + npm)
