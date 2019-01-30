@@ -14,7 +14,7 @@
   "devDependencies": {
     "co": ">= 4.6.0 < 5",
     "gnode": "0.1.2",
-    "jade": "1",
+    "jade": ">= 1.11.0 < 2",
     "js-yaml": "3",
     "request": "2"
   },
