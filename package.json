@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": "repo-utils/badgeboard",
   "devDependencies": {
-    "co": "4",
+    "co": ">= 4.6.0 < 5",
     "gnode": "0.1.2",
     "jade": "1",
     "js-yaml": "3",
